@@ -1,0 +1,25 @@
+{
+  "name": "onec-syntaxparser",
+  "version": "0.0.0",
+  "description": "Parser for 1C bsl language based on regexp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "bsl",
+    "syntax",
+    "1C",
+    "1c"
+  ],
+  "author": "Shenja Sosna <shenja@sosna.zp.ua>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~2.4.5",
+    "chai": "~3.5.0",
+    "underscore": "~1.8.3"
+  },
+  "dependencies": {
+    "lokijs": "~1.3.15"
+  }
+}
