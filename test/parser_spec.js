@@ -60,8 +60,23 @@ describe("Parser", function () {
             expect(method._method.Calls.length).to.equal(2);
         })
         it("Функция должна быть иметь большое описание description", function () {
-            expect(method.description.split("\n").length).to.equal(15);
+            var text = "dddd"
+            expect(method.description.split("\n").length).to.equal(12);
         })
+    })
+    
+    describe("Проверка парсинга комментариев для модуля.", function() {
+      let method;
+      
+      beforeEach(function () {
+        method = methods.find(
+            {"name":"ТестСКомментарием"}
+        )[0];
+      });
+      
+      it("комментарий должен состоять из 2х строк", function(){
+          expect(method.description).to.equal("// ТестСКомментарием\n//");
+      })  
     })
     }
 )
