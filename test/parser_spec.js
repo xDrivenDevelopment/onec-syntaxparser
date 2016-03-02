@@ -14,11 +14,13 @@ describe("Parser", function () {
     var parser;
     var list;
     var names;
-    var methods;        
+    var methods;       
+    let modulecontext; 
 
     beforeEach(function () {
         parser = new Parser();
-        methods = parser.parse(objectFixture).getMethodsTable();
+        modulecontext = parser.parse(objectFixture);
+        methods = modulecontext.getMethodsTable();
         list = methods.find();
         names = _.pluck(list, 'name');
     });
@@ -59,10 +61,27 @@ describe("Parser", function () {
         it("Функция должна быть иметь 1 вызов _method.Calls", function () {
             expect(method._method.Calls.length).to.equal(2);
         })
+        
         it("Функция должна быть иметь большое описание description", function () {
             var text = "dddd"
             expect(method.description.split("\n").length).to.equal(12);
+        });
+        
+        it("Определим по номеру строки к какой функции она относится", function () {
+            expect(modulecontext.getMethodByLineNumber(23)).to.be.a('object');
+            expect(modulecontext.getMethodByLineNumber(23).Name).to.equal("СложнаяФункцияСКучейПараметров");
+        });
+        
+        it("Определим по наименованию процедуры старт и начало этой процедуры", function () {
+            //expect(modulecontext.get)
         })
+        
+        it("Получим список вызовов внешних функций для процедуры ", function () {
+            expect(modulecontext.getMethodByLineNumber(23)).to.be.a("object");
+            expect(modulecontext.getMethodByLineNumber(23).Name).to.equal("СложнаяФункцияСКучейПараметров");
+        })
+        
+        
     })
     
     describe("Проверка парсинга комментариев для модуля.", function() {
