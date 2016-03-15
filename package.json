@@ -5,7 +5,7 @@
   "main": "lib/parser.js",
   "scripts": {
     "test": "mocha test", 
-    "test-debug": "mocha test --debug-brk"
+    "debug-test": "mocha test --debug-brk"
   },
   "keywords": [
     "bsl",
