@@ -62,14 +62,14 @@ describe("Parser", function () {
             expect(method._method.Calls.length).to.equal(3);
         })
         
-        it("Функция ТестЭкспортФункция1 должна быть иметь 2 вызова и иметь позицию строки в 22 и линии 3 с учетом tab", function () {
+        it("Функция ТестЭкспортФункция1 должна быть иметь 2 вызова и иметь позицию строки в 25 и линии 3 с учетом tab", function () {
             let name = "ТестЭкспортФункция1";
             expect(method._method.Calls).to.contain(name)
             for (var key in method._method.CallsPosition) {
                 if (method._method.CallsPosition.hasOwnProperty(key)) {
                     var element = method._method.CallsPosition[key];
                     if (element.call.toUpperCase() === name.toUpperCase() ){
-                        expect(element.line).to.equal(22);
+                        expect(element.line).to.equal(25);
                         expect(element.character).to.equal(10);
                         break;
                     }
@@ -113,6 +113,9 @@ describe("Parser", function () {
           expect(method.description).to.equal("// ТестСКомментарием\n//");
       })  
     })
-    }
-)
+    it("Должны найти вызов функции в модуле 'СложнаяФункцияСКучейПараметров'", function () {
+            expect(modulecontext.context.Calls.length).to.equal(1);
+    })
+    
+})
 
