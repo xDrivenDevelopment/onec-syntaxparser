@@ -1,10 +1,10 @@
 {
   "name": "onec-syntaxparser",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Parser for 1C bsl language based on regexp",
   "main": "lib/parser.js",
   "scripts": {
-    "test": "mocha test", 
+    "test": "mocha test",
     "debug-test": "mocha test --debug-brk"
   },
   "keywords": [
@@ -22,12 +22,12 @@
   },
   "dependencies": {
     "lokijs": "~1.3.15"
-  }, 
+  },
   "repository": {
-      "type": "git", 
-      "url": "https://github.com/pumbaEO/onec-syntaxparser.git"
-  }, 
+    "type": "git",
+    "url": "https://github.com/pumbaEO/onec-syntaxparser.git"
+  },
   "bugs": {
-      "url": "https://github.com/pumbaEO/onec-syntaxparser/issues"
+    "url": "https://github.com/pumbaEO/onec-syntaxparser/issues"
   }
 }
