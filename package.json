@@ -1,6 +1,6 @@
 {
   "name": "onec-syntaxparser",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Parser for 1C bsl language based on regexp",
   "main": "lib/parser.js",
   "scripts": {
