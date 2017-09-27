@@ -4,7 +4,7 @@
   "description": "Parser for 1C bsl language based on regexp",
   "main": "lib/parser.js",
   "scripts": {
-    "test": "mocha test",
+    "test": "nyc --reporter=text mocha test",
     "debug-test": "mocha test --debug-brk"
   },
   "keywords": [
@@ -16,8 +16,9 @@
   "author": "Shenja Sosna <shenja@sosna.zp.ua>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "mocha": "~2.4.5",
     "chai": "~3.5.0",
+    "mocha": "~2.4.5",
+    "nyc": "^11.2.1",
     "underscore": "~1.8.3"
   },
   "dependencies": {
