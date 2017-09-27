@@ -61,9 +61,8 @@ describe("Parser en", function () {
         it("Функция должна быть иметь 2 параметра и один из них по значению _method.Params", function () {
             //console.log(method._method);
             expect(method._method.Params.length).to.equal(2);
-            expect(method._method.Params[0]).to.deep.eq({"name":"ЗнакТабуляции", "byval": true});
-            expect(method._method.Params[1]).to.deep.eq({"name":"НоваяФичаТипаСруктуры", "byval": false});
-        })
+            expect(method._method.Params[0]).to.deep.eq({"name":"ЗнакТабуляции", "byval": true, "default":""});
+            expect(method._method.Params[1]).to.deep.eq({"name":"НоваяФичаТипаСруктуры", "byval": false, "default":"Неопределено"});        })
         
         it("Функция должна быть иметь 3 вызова внешних процедур", function () {
             expect(method._method.Calls.length).to.equal(3);
