@@ -1,4 +1,6 @@
 # onec-syntaxparser
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/xDrivenDevelopment/onec-syntaxparser.svg)](https://greenkeeper.io/)
 Парсер синтаксиса 1с, на простых регулярках. 
 
-[ ![Codeship Status for pumbaEO/onec-syntaxparser](https://codeship.com/projects/77c4af10-eb95-0133-56db-5680c82dbe9d/status?branch=master)](https://codeship.com/projects/148125)
+[![Build Status](https://travis-ci.org/xDrivenDevelopment/onec-syntaxparser.svg?branch=master)](https://travis-ci.org/xDrivenDevelopment/onec-syntaxparser)

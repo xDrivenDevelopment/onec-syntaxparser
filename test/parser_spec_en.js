@@ -8,9 +8,9 @@ var _ = require("underscore");
 
 var Parser = require('../lib/parser.js');
 
-var objectFixture = fs.readFileSync(__dirname + '/fixtures/module.os', 'utf-8');
+var objectFixture = fs.readFileSync(__dirname + '/fixtures/module_en.os', 'utf-8');
 
-describe("Parser", function () {
+describe("Parser en", function () {
     var parser;
     var list;
     var names;
@@ -62,8 +62,7 @@ describe("Parser", function () {
             //console.log(method._method);
             expect(method._method.Params.length).to.equal(2);
             expect(method._method.Params[0]).to.deep.eq({"name":"ЗнакТабуляции", "byval": true, "default":""});
-            expect(method._method.Params[1]).to.deep.eq({"name":"НоваяФичаТипаСруктуры", "byval": false, "default":"Неопределено"});
-        })
+            expect(method._method.Params[1]).to.deep.eq({"name":"НоваяФичаТипаСруктуры", "byval": false, "default":"Неопределено"});        })
         
         it("Функция должна быть иметь 3 вызова внешних процедур", function () {
             expect(method._method.Calls.length).to.equal(3);
