@@ -16,7 +16,7 @@
   "author": "Shenja Sosna <shenja@sosna.zp.ua>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "mocha": "~5.1.0",
+    "mocha": "~5.2.0",
     "chai": "~4.1.2",
     "nyc": "^11.2.1",
     "underscore": "~1.9.0"
